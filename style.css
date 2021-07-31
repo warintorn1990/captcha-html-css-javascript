@@ -1,0 +1,137 @@
+/* Import Google font - Poppins & Noto */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #4db2ec;
+}
+
+.wrapper {
+  width: 485px;
+  /* width: 100%; */
+  background: #fff;
+  border-radius: 10px;
+  padding: 22px 3px 10px;
+}
+.wrapper header {
+  color: #4db2ec;
+  font-weight: 500;
+  font-size: 33px;
+  text-align: center;
+}
+
+.wrapper .captcha-area {
+  display: flex;
+  height: 65px;
+  margin: 30px 0 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.captcha-area .captcha-img {
+  height: 100%;
+  width: 100%;
+  user-select: none;
+  position: relative;
+  background: #000;
+  border-radius: 5px;
+}
+
+.captcha-img img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  object-fit: cover;
+}
+
+.captcha-img .captacha {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  color: #fff;
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: 10px;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 0 2px #a9a9a9;
+  font-family: "Noto Serif", serif;
+}
+
+.wrapper button {
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #4db2ec;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.captcha-area .reload-btn {
+  width: 75px;
+  height: 100%;
+  font-size: 25px;
+}
+
+.captcha-area i {
+  transition: transform 0.3s ease;
+}
+
+.captcha-area .reload-btn:hover i {
+  transform: rotate(15deg);
+}
+
+.wrapper .input-area {
+  height: 60px;
+  width: 100%;
+  position: relative;
+}
+
+.input-area input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 20px;
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.input-area input:is(:focus, :valid) {
+  padding-left: 20px;
+  border: 2px solid #4db2ec;
+}
+
+.input-area .check-btn {
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  height: 45px;
+  opacity: 0;
+  pointer-events: none;
+  padding: 0 20px;
+  font-size: 17px;
+  transform: translateY(-50%);
+}
+
+.input-area input:valid + .check-btn {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.wrapper .status-txt {
+  display: none;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0 -5px 0;
+  text-align: center;
+}
